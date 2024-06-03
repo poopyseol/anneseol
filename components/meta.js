@@ -2,9 +2,9 @@ import React from 'react'
 import Head from 'next/head'
 
 const Meta = ({
-  title = 'OhAanika',
-  description = 'Software Developer based in Montreal Canada',
-  author = 'Aanika Rahman',
+  title = 'Anne Seol',
+  description = 'Designer based in Vancouver Canada',
+  author = 'Anne SueYeun Seol',
 }) => (
   <Head>
     <title>{title}</title>

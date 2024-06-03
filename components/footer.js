@@ -3,34 +3,39 @@ import Image from 'next/image'
 const SocialMediaIconInfo = [
   {
     name: 'GitHub',
-    link: 'https://github.com/ohaanika',
+    link: 'https://github.com/poopyseol',
     img: '/images/icons/social-github.svg',
   },
   {
     name: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/aanikarahman',
+    link: 'www.linkedin.com/in/anne-seol-348a21190',
     img: '/images/icons/social-linkedin.svg',
   },
   {
     name: 'Instagram',
-    link: 'https://www.instagram.com/ohaanika',
+    link: 'https://www.instagram.com/seols_sa/',
     img: '/images/icons/social-instagram.svg',
   },
   {
-    name: 'Pinterest',
-    link: 'https://www.pinterest.ca/ohaanika/',
-    img: '/images/icons/social-pinterest.svg',
+    name: 'YouTube',
+    link: 'https://www.youtube.com/@poopyseol',
+    img: '/images/icons/social-youtube.svg',
   },
-  {
-    name: 'Goodreads',
-    link: 'https://www.goodreads.com/ohaanika',
-    img: '/images/icons/social-goodreads.svg',
-  },
-  {
-    name: 'Spotify',
-    link: 'https://open.spotify.com/user/1180930840',
-    img: '/images/icons/social-spotify.svg',
-  },
+  // {
+  //   name: 'Pinterest',
+  //   link: 'https://www.pinterest.ca/ohaanika/',
+  //   img: '/images/icons/social-pinterest.svg',
+  // },
+  // {
+  //   name: 'Goodreads',
+  //   link: 'https://www.goodreads.com/ohaanika',
+  //   img: '/images/icons/social-goodreads.svg',
+  // },
+  // {
+  //   name: 'Spotify',
+  //   link: 'https://open.spotify.com/user/1180930840',
+  //   img: '/images/icons/social-spotify.svg',
+  // },
   // {
   //   name: 'Flickr',
   //   link: 'https://www.flickr.com/photos/aanikarahman',
@@ -69,7 +74,7 @@ function displaySocialMediaIcon(SocialMediaIcon, i) {
 
 function displayCopyrightMessage() {
   let currentYear = new Date().getFullYear()
-  return <p>© {currentYear} OHAANIKA. All Rights Reserved.</p>
+  return <p>© {currentYear} ANNE SEOL. All Rights Reserved.</p>
 }
 
 const Footer = () => {

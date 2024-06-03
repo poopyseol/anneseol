@@ -38,7 +38,7 @@ const Header = () => (
       }
     >
       <Link href="/">
-        OHAANIKA
+        ANNE SEOL
         {/* <Image
           src={'/images/logos/logo-name-black.svg'}
           alt="ohaanika-logo"
