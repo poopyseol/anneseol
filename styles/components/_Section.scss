@@ -1,0 +1,187 @@
+@use '../breakpoints' as *;
+
+.section, .footer {
+    // internal variables
+    --_skipLink-width: calc(1.7 * var(--font-md));
+    --_skipLink-height: calc(1.7 * var(--font-md) + var(--targetSize-pad-5rem));
+
+    display: grid;
+    grid-template-columns: var(--section-side-width) 1fr;
+    align-items: start;
+    gap: var(--pad-lg);
+    position: relative;
+
+    padding-right: var(--section-pad-hrz);
+    padding-bottom: var(--pad-6xl);
+    padding-left: var(--section-pad-hrz);
+
+    & > .separator {
+        position: absolute;
+        top: 0;
+        right: var(--section-pad-hrz);
+        left: var(--section-pad-hrz);
+    }
+
+    &__side {
+        position: sticky;
+        top: 0;
+        right: 0;
+        left: 0;
+        min-width: 0px;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--padRem-sm);
+
+        // top padding with alignment compensation
+        padding-top: calc(var(--section-pad-vrt) - var(--padRem-5xs));
+        // avoid overlapping separator
+        margin-top: var(--border-width);
+
+        .skipLinks {
+            display: flex;
+            flex-direction: row;
+            gap: var(--padRem-xxxs);
+
+            a, &.hidden a, &.hidden:hover a, &.hidden:focus-within a {
+                display: grid;
+                align-items: center;
+                width: var(--_skipLink-width);
+                height: var(--_skipLink-height);    
+
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+                font-size: var(--font-md);
+                text-align: center;
+
+                // alignment compensation
+                padding-top: var(--pad-6xs);
+                border: solid var(--border-width) var(--clr-200);
+                border-radius: var(--bradius-round);
+
+                transition: color var(--trans-standard),
+                            border-color var(--trans-standard);
+
+                &:hover, &:focus, &:active, &:focus-visible {
+                    color: var(--clr-1000);
+                    border-color: var(--clr-600);
+                }
+
+                &:focus-visible {
+                    outline: solid var(--outline-width) var(--clr-focus);
+                    outline-offset: calc(-1 * var(--border-width));
+                }
+            }
+
+            &.hidden {
+                &:hover a, &:focus-within a {
+                    color: var(--clr-800);
+                    border-color: var(--clr-200);
+                }
+
+                a {
+                    color: var(--clr-100);
+                    border-color: var(--clr-100);
+                }
+            }
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: var(--pad-xl);
+        position: relative;
+        min-width: 0px;
+
+        padding-top: var(--section-pad-vrt);
+        // avoid overlapping separator
+        margin-top: var(--border-width);
+    }
+
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-laptop) {
+    .section, .footer {
+        gap: var(--pad-xxl);
+
+        &__side {
+            align-items: center;
+
+            h2 {
+                // make text vertical
+                writing-mode: vertical-rl;
+                overflow-wrap: normal;
+                white-space: nowrap;
+
+                // rotate 180 degress
+                transform: rotate(180deg);
+            }
+
+            .skipLinks {
+                flex-direction: column;
+
+                &.hidden a {
+                    color: var(--clr-800);
+                    border-color: var(--clr-200);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-xs) {
+    .section, .footer {
+        grid-template-columns: 1fr;
+
+        &__side {
+            position: relative;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+
+            h2 {
+                // reset vertical text
+                writing-mode: unset;
+                overflow-wrap: normal;
+                white-space: normal;
+
+                // reset rotation
+                transform: none;
+            }
+
+            .skipLinks {
+                flex-direction: row;
+
+                &.hidden a {
+                    color: var(--clr-800);
+                    border-color: var(--clr-200);
+                }
+            }
+        }
+
+        &__main {
+            padding-top: 0;
+        }
+    }
+}
+
+@media print {
+    .section, .footer {
+        &:last-of-type {
+            // remove bottom padding from last section to prevent page overflow
+            padding-bottom: 0 !important;
+        }
+
+        &__side {
+            position: relative;
+            
+            .skipLinks {
+                display: none;
+            }
+        }
+    }
+}

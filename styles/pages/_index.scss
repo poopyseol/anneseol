@@ -1,0 +1,21 @@
+// Partial SCSS file forwarding all partials under '/styles/pages'
+
+
+
+// === FORWARD ================================
+@forward 'About';
+@forward 'Archive';
+@forward 'Home';
+@forward 'Info';
+@forward 'Projects';
+@forward 'Resume';
+@forward 'Settings';
+
+@forward 'Budgetty';
+@forward 'EggHolders';
+@forward 'Error';
+@forward 'MachinistsEdge';
+@forward 'MiniSynth';
+@forward 'Richardfxr';
+@forward 'RISDSophomore';
+@forward 'WeatherDial';

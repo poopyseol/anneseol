@@ -1,0 +1,105 @@
+@use '../breakpoints' as *;
+
+.button {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: var(--padRem-xxs);
+
+    color: var(--clr-800);
+    border: solid var(--border-width) var(--clr-300);
+    border-radius: var(--bradius-round);
+
+    transition: color var(--trans-standard),
+                border var(--trans-standard),
+                transform var(--trans-standard);
+
+    &:hover, &:focus, &:focus-visible {
+        color: var(--clr-1000);
+        border-color: var(--clr-600);
+
+        svg .stroke--md {
+            stroke:  var(--clr-1000);
+        }
+    }
+
+    &:focus-visible {
+        outline: solid var(--outline-width) var(--clr-focus);
+        outline-offset: calc(-1 * var(--outline-width));
+    }
+
+    &.sm {
+        font-size: var(--font-sm);
+
+        padding: calc(var(--pad-xxs) + var(--targetSize-pad-1rem))
+                 calc((var(--font-sm) - 0.3rem + var(--pad-xxs)) + var(--targetSize-pad-2rem));
+
+        &:active {
+            transform: var(--active-translateY-sm);
+        }
+    }
+
+    &.colored {
+        // internal variables
+        --_clr-bg: var(--clr-rblue);
+        --_clr-bg-hover: var(--clr-rblue-hover);
+        --_clr-bg-active: var(--clr-rblue-active);
+        --_clr-txt: var(--clr-0);
+
+        font-weight: 500;
+        color: var(--_clr-txt);
+        background-color: var(--_clr-bg);
+
+        border-color: var(--_clr-bg);
+
+        transition: color var(--trans-standard),
+                    background-color var(--trans-standard),
+                    transform var(--trans-standard);
+
+        &:hover, &:active, &:focus-visible {
+            background-color: var(--_clr-bg-hover);
+            border-color: var(--_clr-bg-hover);
+        }
+
+        &:focus-visible {
+            outline-offset: var(--pad-4xs);
+        }
+
+        &:active {
+            background-color: var(--_clr-bg-active);
+            border-color: var(--_clr-bg-active);
+        }
+    }
+
+    svg {
+        width: var(--font-sm);
+
+        .stroke--md {
+            stroke: var(--clr-800);
+        }
+    }
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-mobile) {
+    .button {
+        &.sm {
+            padding: calc(var(--pad-xs) + var(--targetSize-pad-1rem))
+                     calc(var(--font-sm) - 0.2rem + var(--pad-xs) + var(--targetSize-pad-2rem));
+        }
+    }
+}
+
+@media print {
+    .button {
+        display: none;
+        
+        &.rblue {
+            // force background color to show
+            -webkit-print-color-adjust:exact !important;
+            print-color-adjust:exact !important;
+        }
+    }
+}

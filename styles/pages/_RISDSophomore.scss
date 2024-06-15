@@ -1,0 +1,8 @@
+#risdsophomore {
+    .section__main {
+        .separator {
+            margin-top: var(--pad-5xl);
+            margin-bottom: calc(var(--section-pad-vrt) - var(--pad-xl));
+        }
+    }
+}

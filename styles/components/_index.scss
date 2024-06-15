@@ -1,0 +1,23 @@
+// Partial SCSS file forwarding all partials under '/styles/components'
+
+
+
+// === FORWARD ================================
+@forward 'Layout';
+@forward 'Separator';
+@forward 'UnderlinedLink';
+@forward 'Button';
+@forward 'Section';
+@forward 'Footer';
+
+@forward 'A11yMenu';
+@forward 'Breadcrumbs';
+@forward 'Img';
+@forward 'Navbar';
+@forward 'PageHeading';
+@forward 'ProjectCard';
+@forward 'ProjectInfo';
+@forward 'RadioSelectors';
+@forward 'ScrollContainer';
+@forward 'Table';
+@forward 'VersionBadge';

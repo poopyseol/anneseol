@@ -1,0 +1,310 @@
+// Partial SCSS file containing variables
+@use 'breakpoints' as *;
+
+
+/* ============================================
+   VARIABLES
+   ============================================ */
+:root {
+   --max-width: 1400px;
+   --nav-size: 85px;
+
+   --section-pad-hrz: var(--pad-xxxl);
+   --section-pad-vrt: var(--pad-xxl);
+   --section-side-width: 280px;
+   --threeCol-minWidth: 14rem;
+
+   --indicator-thickness: 4px;
+   --indicator-length: 1.125rem;
+   --indicator-gap: 14px;
+
+   --padRem-6xs: 0.0625rem;
+   --padRem-5xs: 0.125rem;
+   --padRem-4xs: 0.25rem;
+   --padRem-xxxs: 0.375rem;
+   --padRem-xxs: 0.5rem;
+   --padRem-xs: 0.625rem;
+   --padRem-sm: 0.75rem;
+   --padRem-md: 1rem;                        // gap between list elements
+   --padRem-lg: 1.25rem;
+   --padRem-xl: 1.5rem;
+   --padRem-xxxl: 2.5rem;
+
+   --pad-6xs: 1px;
+   --pad-5xs: 2px;
+   --pad-4xs: 4px;
+   --pad-xxxs: 6px;
+   --pad-xxs: 8px;
+   --pad-xs: 10px;
+   --pad-sm: 12px;
+   --pad-md: 16px;
+   --pad-lg: 20px;
+   --pad-xl: 24px;
+   --pad-xxl: 30px;
+   --pad-xxxl: 40px;
+   --pad-4xl: 50px;
+   --pad-5xl: 70px;
+   --pad-6xl: 90px;
+   --pad-7xl: 110px;
+   --pad-8xl: 140px;
+
+   --targetSize-multiplier: 1;
+   --targetSize-pad-1rem: calc(1rem * (var(--targetSize-multiplier) - 1));
+   --targetSize-pad-2rem: calc(2rem * (var(--targetSize-multiplier) - 1));
+   --targetSize-pad-3rem: calc(3rem * (var(--targetSize-multiplier) - 1));
+   --targetSize-pad-4rem: calc(4rem * (var(--targetSize-multiplier) - 1));
+   --targetSize-pad-5rem: calc(5rem * (var(--targetSize-multiplier) - 1));
+
+   --fontSize-increase: 0rem;
+
+   // === BORDER & OUTLINE ===================
+   // border
+   --border-width: 1.4px;                     // standard border width
+   --border-width-thick: 2.5px;
+   --bradius-xxs: 2px;                        // border radius of <NavBar /> page indicator
+   --bradius-xs: 4px;                         
+   --bradius-sm: 6px;                         // standard border radius for wrapper borders
+   --bradius-xxl: 35px;                       // largest border radius for special corners
+   --bradius-round: 1e5px;                    // extremely larg border radius to produce circular sides
+   // outline
+   --outline-width: 3px;
+
+   // === TYPOGRAPHY =========================
+   --font-xs: calc(1rem + var(--fontSize-increase));
+   --font-sm: calc(1.15rem + var(--fontSize-increase));
+   --font-md: calc(1.3rem + var(--fontSize-increase));
+   --font-lg: calc(1.5rem + var(--fontSize-increase));
+   --font-xl: calc(2rem + var(--fontSize-increase));
+   --font-2xl: calc(3rem + var(--fontSize-increase));
+   --font-enormous: 7rem;
+
+   // === TRANSFORMS =========================
+   --active-translateY-sm: translateY(2px);
+   --active-translateY-md: translateY(3px);
+
+   // === TRANSITIONS ========================
+   // transitions
+   --trans-standard: var(--transTime-standard) ease;
+   // timings
+   --transTime-standard: 0.15s;
+   --transTime-slow: 0.2s;
+   --transTime-slowest: 0.30s;
+
+   --transTime-slowest-lowMo: 0.30s;
+   // timing functions
+   --transFunc-enhancedEase: cubic-bezier(.57,-0.01,.22,1.04);
+}
+
+
+
+// === BREAKPOINTS ============================
+@media only screen and (max-width: $breakpoint-laptop) {
+   :root {
+      --section-side-width: var(--font-sm);
+   }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) {
+   :root {
+      --nav-size: 83px;
+         
+      --padRem-6xs: 0.053125rem;
+      --padRem-5xs: 0.0625rem;
+      --padRem-4xs: 0.1875rem;
+      --padRem-xxxs: 0.3125rem;
+      --padRem-xxs: 0.4375rem;
+      --padRem-xs: 0.5625rem;
+      --padRem-sm: 0.6875rem;
+      --padRem-md: 0.875rem;                       // gap between list elements
+      --padRem-lg: 1.125rem;
+      --padRem-xl: 1.375rem;
+      --padRem-xxxl: 2.1875rem;
+   
+      --pad-6xs: 0.85px;
+      --pad-5xs: 1px;
+      --pad-4xs: 3px;
+      --pad-xxxs: 5px;
+      --pad-xxs: 7px;
+      --pad-xs: 9px;
+      --pad-sm: 11px;
+      --pad-md: 14px;
+      --pad-lg: 18px;
+      --pad-xl: 22px;
+      --pad-xxl: 27px;
+      --pad-xxxl: 35px;
+      --pad-4xl: 45px;
+      --pad-5xl: 60px;
+      --pad-6xl: 80px;
+      --pad-7xl: 100px;
+      --pad-8xl: 125px;
+   
+      // === BORDER & OUTLINE ===================
+      // border
+      --bradius-xxl: 32px;                       // largest border radius for special corners
+   
+      // === TYPOGRAPHY =========================
+      --font-xs: calc(0.9rem + var(--fontSize-increase));
+      --font-sm: calc(1.1rem + var(--fontSize-increase));
+      --font-md: calc(1.2rem + var(--fontSize-increase));
+      --font-lg: calc(1.3rem + var(--fontSize-increase));
+      --font-xl: calc(1.8rem + var(--fontSize-increase));
+      --font-enormous: 5rem;
+   }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+   :root {
+      --nav-size: 80px;
+
+      --section-pad-hrz: var(--pad-xl);
+      --section-side-width: var(--font-sm);
+      --threeCol-minWidth: 10rem;
+
+      --padRem-6xs: 0.03125rem;
+      --padRem-5xs: 0.0625rem;
+      --padRem-4xs: 0.125rem;
+      --padRem-xxxs: 0.25rem;
+      --padRem-xxs: 0.375rem;
+      --padRem-xs: 0.5rem;
+      --padRem-sm: 0.625rem;
+      --padRem-md: 0.75rem;                        // gap between list elements
+      --padRem-lg: 1rem;
+      --padRem-xl: 1.25rem;
+      --padRem-xxxl: 1.875rem;
+
+      --pad-6xs: 0.5px;
+      --pad-5xs: 1px;
+      --pad-4xs: 2px;
+      --pad-xxxs: 4px;
+      --pad-xxs: 6px;
+      --pad-xs: 8px;
+      --pad-sm: 10px;
+      --pad-md: 12px;
+      --pad-lg: 16px;
+      --pad-xl: 20px;
+      --pad-xxl: 24px;
+      --pad-xxxl: 30px;
+      --pad-4xl: 40px;
+      --pad-5xl: 50px;
+      --pad-6xl: 70px;
+      --pad-7xl: 90px;
+      --pad-8xl: 110px;
+
+      // === BORDER & OUTLINE ===================
+      // border
+      --border-width: 1.4px;                     // standard border width
+      --bradius-xxs: 2px;                        // border radius of <NavBar /> page indicator
+      --bradius-xs: 3px;                         
+      --bradius-sm: 5px;                         // standard border radius for wrapper borders
+      --bradius-xxl: 30px;                       // largest border radius for special corners
+
+      // === TYPOGRAPHY =========================
+      --font-xs: calc(0.85rem + var(--fontSize-increase));
+      --font-sm: calc(1rem + var(--fontSize-increase));
+      --font-md: calc(1.15rem + var(--fontSize-increase));
+      --font-lg: calc(1.3rem + var(--fontSize-increase));
+      --font-xl: calc(1.75rem + var(--fontSize-increase));
+      --font-enormous: 3.8rem;
+   }
+}
+
+@media print {
+   :root {
+      --max-width: 1200px;
+      --nav-size: 85px;
+   
+      --section-pad-hrz: var(--pad-xxxl);
+      --section-pad-vrt: var(--pad-xxl);
+      --section-side-width: 140px;
+      --threeCol-minWidth: 168px;
+   
+      --indicator-thickness: 4px;
+      --indicator-length: 1.125rem;
+      --indicator-gap: 14px;
+   
+      --padRem-6xs: 0.5px;
+      --padRem-5xs: 1px;
+      --padRem-4xs: 2px;
+      --padRem-xxxs: 4px;
+      --padRem-xxs: 4px;
+      --padRem-xs: 5px;
+      --padRem-sm: 6px;
+      --padRem-md: 8px;                        // gap between list elements
+      --padRem-lg: 10px;
+      --padRem-xl: 12px;
+      --padRem-xxxl: 20px;
+   
+      --pad-6xs: 0.5px;
+      --pad-5xs: 1px;
+      --pad-4xs: 2px;
+      --pad-xxxs: 3px;
+      --pad-xxs: 4px;
+      --pad-xs: 5px;
+      --pad-sm: 6px;
+      --pad-md: 8px;
+      --pad-lg: 10px;
+      --pad-xl: 12px;
+      --pad-xxl: 16px;
+      --pad-xxxl: 20px;
+      --pad-4xl: 25px;
+      --pad-5xl: 35px;
+      --pad-6xl: 43px;
+      --pad-7xl: 55px;
+      --pad-8xl: 70px;
+   
+      --targetSize-pad-1rem: calc(1rem * (var(--targetSize-multiplier) - 1));
+      --targetSize-pad-2rem: calc(2rem * (var(--targetSize-multiplier) - 1));
+      --targetSize-pad-3rem: calc(3rem * (var(--targetSize-multiplier) - 1));
+      --targetSize-pad-4rem: calc(4rem * (var(--targetSize-multiplier) - 1));
+      --targetSize-pad-5rem: calc(5rem * (var(--targetSize-multiplier) - 1));
+   
+      // === BORDER & OUTLINE ===================
+      // border
+      --border-width: 1pt;                      // standard border width
+      --border-width-thick: 2.5px;
+      --bradius-xxs: 2px;                        // border radius of <NavBar /> page indicator
+      --bradius-xs: 4px;                         
+      --bradius-sm: 6px;                         // standard border radius for wrapper borders
+      --bradius-xxl: 35px;                       // largest border radius for special corners
+      --bradius-round: 1e5px;                    // extremely larg border radius to produce circular sides
+      // outline
+      --outline-width: 3px;
+   
+      // === TYPOGRAPHY =========================
+      --font-xs: 8px;
+      --font-sm: 10px;
+      --font-md: 13.5px;
+      --font-lg: 16px;
+      --font-xl: 24px;
+      --font-enormous: 64px;
+   }
+}
+
+
+
+// === A11Y ===================================
+[data-fontSize="medium"] {
+   --fontSize-increase: 0.15rem;
+}
+
+[data-fontSize="large"] {
+   --fontSize-increase: 0.3rem;
+}
+
+[data-motionPref="low"] {
+   --transTime-slowest-lowMo: 0s;
+}
+
+@media (prefers-reduced-motion) {
+   [data-motionPref="auto"] {
+      --transTime-slowest-lowMo: 0s;
+   }
+}
+
+[data-targetSize="medium"] {
+   --targetSize-multiplier: 1.15;
+}
+
+[data-targetSize="large"] {
+   --targetSize-multiplier: 1.35;
+}

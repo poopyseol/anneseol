@@ -1,0 +1,25 @@
+@use '../breakpoints' as *;
+
+#projects {
+
+    #works {
+        padding-bottom: var(--pad-6xl);
+        
+        #workFilter {
+            width: 100%;
+
+            .scrollContainer {
+                padding-bottom: calc(var(--section-pad-vrt) / 3);
+            }
+        }
+
+        .radioSelectors {
+            .label {
+                // set same height as <h2> and align them vertically
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@use '../breakpoints' as *;
+
+.separator {
+    position: relative;
+
+    height: var(--border-width);
+
+    border: none;
+    margin: 0;
+
+    background-color: var(--clr-200);
+
+    overflow: visible;
+}
+
+
+
+// === BREAKPOINTS ============================
+@media print {
+    .separator{
+        height: 0;
+        border-bottom: solid var(--border-width) var(--clr-300);
+        // transform: scaleY(0.33); // scale to get thinner line when printed
+    }
+}
+
+
+
+// === A11Y ===================================
+@media (forced-colors: active) {
+    .separator {
+        background-color: CanvasText;
+    }
+}
