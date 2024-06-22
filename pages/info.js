@@ -23,7 +23,7 @@ export default function Info() {
     return (
         <>
             <Head>
-                <title>Website Info | Richard Fu</title>
+                <title>Website Info | Anne SueYeun Seol</title>
                 <meta
                     name="description"
                     content="Version 10.2 of my portfolio website built using Next.js with React, and animated with Framer Motion."

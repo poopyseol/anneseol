@@ -37,7 +37,7 @@ export default function About() {
     return (
         <>
             <Head>
-                <title>About | Richard Fu</title>
+                <title>About | Anne SueYeun Seol</title>
                 <meta
                     name="description"
                     content="Maker of art – creator of designs – coder of websites – builder of computers – lover of keyboards – student of RISD."
@@ -67,7 +67,7 @@ export default function About() {
                             <Img img={SelfPortrait} layoutID="SelfPortrait" alt="Graphite self-portrait. I’m an Asian male with short black hair wearing a pair of aviator-style glasses." priority />
                         </div>
                         <div className='text'>
-                            <p className='md name'>Richard Fu</p>
+                            <p className='md name'>Anne SueYeun Seol</p>
                             <ul className='buttons'>
                                 <li><a href="https://www.instagram.com/richardfxr/" target="_blank" rel="noreferrer" className='profileCardButton' aria-label="Instagram"><Instagram /></a></li>
                                 <li><a href="https://github.com/richardfxr" target="_blank" rel="noreferrer" className='profileCardButton' aria-label="GitHub"><GitHub /></a></li>

@@ -36,7 +36,7 @@ const sections = [
 export default function Budgetty() {
     // project title
     const title = 'Budgetty'
-    const headTitle =`${title} | Richard Fu`;
+    const headTitle =`${title} | Anne SueYeun Seol`;
     // get corresponding project object from projects array
     const project = projects.find(elem => elem.title === title)
 

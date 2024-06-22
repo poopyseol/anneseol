@@ -22,7 +22,7 @@ export default function Settings() {
     return (
         <>
             <Head>
-                <title>Settings | Richard Fu</title>
+                <title>Settings | Anne SueYeun Seol</title>
                 <meta
                     name="description"
                     content="Accessibility-related settings that alter the look and behavior of this website to better suit your needs."

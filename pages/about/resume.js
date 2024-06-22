@@ -25,7 +25,7 @@ export default function Resume() {
     return (
         <>
             <Head>
-                <title>Résumé | Richard Fu</title>
+                <title>Résumé | Anne SueYeun Seol</title>
                 <meta
                     name="description"
                     content="I’m an industrial design student at Rhode Island School of Design who specializes in UI/UX design and web development."

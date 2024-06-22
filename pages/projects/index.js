@@ -72,7 +72,7 @@ export default function Projects() {
     return (
         <>
             <Head>
-                <title>Projects | Richard Fu</title>
+                <title>Projects | Anne SueYeun Seol</title>
                 <meta
                     name="description"
                     content="A showcase of my more recent projects. Newly added projects include my portfolio site, Machinist’s Edge, and Weather Dial."

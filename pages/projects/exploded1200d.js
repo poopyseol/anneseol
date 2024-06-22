@@ -30,7 +30,7 @@ const sections = [
 export default function Exploded1200D() {
     // project title
     const title = 'Exploded 1200D'
-    const headTitle =`${title} | Richard Fu`;
+    const headTitle =`${title} | Anne SueYeun Seol`;
     // get corresponding project object from projects array
     const project = projects.find(elem => elem.title === title)
 

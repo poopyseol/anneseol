@@ -25,14 +25,14 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Richard Fu - Designer, Developer, &amp; Artist</title>
+                <title>Anne SueYeun Seol - Designer, Developer, &amp; Artist</title>
                 <meta
                     name="description"
-                    content="I’m Richard Fu, a designer, developer, and artist who loves blue. This is my portfolio website which contains recent projects and ways to contact me."
+                    content="I’m Anne SueYeun Seol, I'm an designer/artist from Korea, was in Montreal, and now in Vancouver. Love making fun designs and videos!"
                 />
                 <meta property="og:image" content="https://www.richardfxr.com/images/richardfxr-OGimage-2.jpg" />
                 <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
+                <meta property="og:image:height" conteddddnt="630" />
             </Head>
 
             <Layout heading="Hello" id="home">
@@ -50,7 +50,7 @@ export default function Home() {
                             </li>
                         </ul>
                     </ScrollContainer>
-                    <p className="lg">I’m <em>Richard Fu</em>, a <em>designer</em>, <em>developer</em>, and <em>artist</em> who loves blue - <em className="rblue">#11d3e7</em> to be exact.</p>
+                    <p className="lg">I’m <em>Anne SueYeun Seol</em>, a <em>designer</em> / <em>artist</em> from Korea, was in Montreal, and now in Vancouver.</p>
                     <ul className='row md'>
                         <li><Button href='#works' target="_self" styling="sm colored"><span className='inter upDw pad--right'>↓</span> Works</Button></li>
                         <li><Button to='/about' styling="sm">About</Button></li>

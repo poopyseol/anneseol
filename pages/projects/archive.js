@@ -187,7 +187,7 @@ export default function Archive() {
     return (
         <>
             <Head>
-                <title>Archive | Richard Fu</title>
+                <title>Archive | Anne Seol</title>
                 <meta
                     name="description"
                     content="A mostly complete index of my past projects going back to 2017. "

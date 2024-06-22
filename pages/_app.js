@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
         console.log('\n')
 
         // log credits and link GitHub
-        console.log("Designed and developed by Richard Fu.")
+        console.log("Designed and developed by Anne SueYeun Seol.")
         console.log("Code available on GitHub:")
         console.log("https://github.com/richardfxr/richardfxr")
         console.log('\n')

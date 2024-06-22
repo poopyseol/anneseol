@@ -44,7 +44,7 @@ const sections = [
 export default function Weatherdial() {
     // project title
     const title = 'Weather Dial'
-    const headTitle =`${title} | Richard Fu`
+    const headTitle =`${title} | Anne SueYeun Seol`
     // get corresponding project object from projects array
     const project = projects.find(elem => elem.title === title)
 
